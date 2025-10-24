@@ -1,0 +1,26 @@
+/* /index.css — design tokens + utilities + simple animation */
+:root{
+  --bg:#0b0f19;        /* dark background */
+  --card:#111827;      /* card background */
+  --border:#232a3a;    /* subtle border */
+  --brand-purple:#8b5cf6;
+  --brand-pink:#ec4899;
+}
+
+html, body, #root { height: 100%; }
+body { background: var(--bg); color:#e5e7eb; font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+
+.bg-dark-bg{ background: var(--bg); }
+.bg-dark-card{ background: var(--card); }
+.border-dark-border{ border-color: var(--border); }
+.text-brand-purple{ color: var(--brand-purple); }
+.text-brand-pink{ color: var(--brand-pink); }
+.from-brand-purple{ --tw-gradient-from: var(--brand-purple) var(--tw-gradient-from-position); }
+.to-brand-pink{ --tw-gradient-to: var(--brand-pink) var(--tw-gradient-to-position); }
+
+/* simple fade-in-up animation */
+@keyframes fade-in-up{
+  from{ opacity:0; transform: translateY(10px); }
+  to{ opacity:1; transform: translateY(0); }
+}
+.animate-fade-in-up{ animation: fade-in-up .5s ease-out both; }
